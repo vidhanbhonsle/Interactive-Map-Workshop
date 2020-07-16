@@ -1,13 +1,16 @@
 
-# Acquire credentials from Developer Portal 
-To access any of the APIs, first get your credentials by signing up for a freemium account
+# Setup Visual Studio Code
 
-[Register](https://developer.here.com/events/community-sa) for a free developer account</br>
+## Download the ide [VSCODE](https://code.visualstudio.com/download)
+## Install the extension Live Server by Ritwick Dey
+This makes it super easy to see your application on your browser.
 
-## Generate apikeys
+![Live Server Extension](img/live_server.png) 
 
-![Folding in action](https://github.com/kuberaspeaking/HERE-JS-workshop/blob/master/img/RegistrationGif.gif)
-
+## Create a folder named Food_Delivery_With_HERE
+- In VSCODE click on File > Open.. 
+- Open the folder Food_Delivery_With_HERE
+- Click on File > New File and save it as 'index.html' within the folder
 
 [![Foo](https://github.com/vidhanbhonsle/Interactive-Map-Workshop/blob/master/img/s2.png)](https://github.com/vidhanbhonsle/Interactive-Map-Workshop/blob/master/Step2.md) 
 

@@ -11,7 +11,7 @@ An IDE or text editor - Notepad, [Notepad++](https://notepad-plus-plus.org/downl
 An HTML page which shows a map when opened in a browser.
 
 ## Steps
-#### Step 1 : Setup VS code
+#### Step 1 : Setup Visual Studio code
 #### Step 2 : Render a Map and place a marker on our current position with a custom image
 #### Step 3 : search for all hospitals around us and place markers on them
 #### Step 4 : We use isoline routing to find the EV charging stations actually closest to us.
