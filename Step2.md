@@ -1,7 +1,6 @@
-# Render a Map
-Open your favourite IDE or a simple code editor like notepad or notepad++
+# Render a Map and place a marker on our current position with a custom image
 
-Copy the code below into your editor.
+## Copy the code below in the file 'index.html'
 
 ``` html
 <!DOCTYPE html>
