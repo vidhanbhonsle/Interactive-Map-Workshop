@@ -58,42 +58,6 @@
     </script>
 </html>
 ```
-## Save the file as HERE_JS_Workshop.html
-
-</br> Double-click on saved file to view on browser
-
-## Add a position marker using map object of Interactive maps API
-Add the following code before </script> tag
-
-```javascript
-            // create a marker object 
-
-            var posMarker = new H.map.Marker(myPos);
-            
-            // Add the marker to the map 
-
-            map.addObject(posMarker);
-```
-</br> Double-click on saved file to view on browser
-
-## Add multiple marker
-Add the following code before </script> tag
-
-```javascript
-           let locations = [
-			{ lat: 31.22, lng: -91.02 },
-			{ lat: 30.22, lng: -88.02 },
-			{ lat: 29.22, lng: -89.02 },
-			{ lat: 28.22, lng: -88.02 },
-			{ lat: 27.22, lng: -94.02 },
-		];
-
-		locations.forEach(l => {
-			map.addObject(new H.map.Marker(l));
-		});
-```
-</br> Double-click on saved file to view on browser
-
 # Changing the language of the map
 - To change the language, change the 'en-US' to the language code you want:
 - en-US – English (United States)
@@ -111,7 +75,7 @@ Add the following code before </script> tag
 - zh-CN – Chinese (China)
 
 # Adding a position marker using map object of Interactive maps API
-- Add a folder named img inside the folder Food_Delivery_With_HERE
+- Add a folder named img inside the folder Interactive_Map_With_HERE
 - Inside the folder img, save the image you want as the icon for restaurants and home
 - You can also download the ones I used for [home](img/home.png) and [restaurants](img/takeout.png)
 - Add the following code before </script> tag
