@@ -5,10 +5,10 @@
 In this workshop we will learn how to create an interactive map using JS and REST APIs from the HERE Location Suite.
 
 ## Prerequisites
-#### A text editor - Notepad, Notepad++, [VS Code](https://code.visualstudio.com/download)
+A text editor - Notepad, [Notepad++](https://notepad-plus-plus.org/downloads), [VS Code](https://code.visualstudio.com/download), [atom](https://atom.io/)
 
 ## Expected Outcome
-#### An HTML page that shows a map when opened on a browser.
+An HTML page which shows a map when opened in a browser.
 
 ## Steps
 #### Step 1 : Acquire credentials from Developer Portal
