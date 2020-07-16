@@ -4,15 +4,15 @@ Add the following code before </script> tag
 
 ```javascript
            
-            function showDeliveryRest(){
+            function showHospitals(){
 
                 let param = {
                     at : myPosition.lat+','+myPosition.lng,
                     q: "hospital",
-                    limit:5
+                    limit:10
                 }; 
 
-                service.browse(param,displayRestaurants,alert);
+                service.browse(param,displayHospitals,alert);
             }
 ```
 </br> 
@@ -22,7 +22,7 @@ Add the following code before </script> tag
 Add the following code before </script> tag
 
 ```javascript
-        function displayRestaurants(response){
+        function displayHospitals(response){
 
             var takeOutIcon = new H.map.Icon('img/takeout.png');
 
