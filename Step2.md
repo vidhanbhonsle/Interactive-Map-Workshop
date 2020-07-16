@@ -16,7 +16,6 @@
         <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css"/>
     </head>
     <body>
-        <h1 style="text-align: center;">Interactive Map with HERE</h1>
         <div id="mapContainer" style="width: 100vw; height: 100vh;" >
     </body>
     <script>
@@ -30,7 +29,7 @@
 
         // Get your current position from wego.here.com
         
-        var myPosition = {lat: 52.53007, lng: 13.38526};
+        var myPosition = {lat: 12.95677, lng: 77.73164};
 
         // Instantiate (and display) a map object:
 

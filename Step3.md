@@ -1,16 +1,45 @@
 # Search for all hospitals around us and place markers on them
+
 Add the following code before </script> tag
 
 ```javascript
+           
+            function showDeliveryRest(){
 
-            function drawCircle(){
-                var circle = new H.map.Circle(myPos,5000);
-                map.addObject(circle);
+                let param = {
+                    at : myPosition.lat+','+myPosition.lng,
+                    q: "hospital",
+                    limit:5
+                }; 
+
+                service.browse(param,displayRestaurants,alert);
+            }
+```
+</br> 
+
+# Lets add nice markers to display these restaurants
+
+Add the following code before </script> tag
+
+```javascript
+        function displayRestaurants(response){
+
+            var takeOutIcon = new H.map.Icon('img/takeout.png');
+
+            var restGroup = new H.map.Group();
+
+            for(let i = 0; i<response.items.length; i++){
+                let restPosition = response.items[i].position; 
+              
+                let data = response.items[i].title;
+              
+                let restMarker = new H.map.Marker(restPosition,{icon: takeOutIcon} );
+
+                restGroup.addObject(restMarker);
             }
 
-            drawCircle();
+            map.addObject(restGroup);
+        }
 ```
-</br> Double-click on saved file to view on browser
-
 
 [![Foo](https://github.com/vidhanbhonsle/Interactive-Map-Workshop/blob/master/img/s4.png)](https://github.com/vidhanbhonsle/Interactive-Map-Workshop/blob/master/Step4.md) 
