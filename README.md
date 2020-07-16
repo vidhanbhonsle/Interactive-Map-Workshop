@@ -11,11 +11,20 @@ An IDE or text editor - Notepad, [Notepad++](https://notepad-plus-plus.org/downl
 An HTML page which shows a map when opened in a browser.
 
 ## Steps
-#### Step 1 : Acquire credentials from Developer Portal
-#### Step 2 : Render a Map
-#### Step 3 : We draw a cirle around our position
+#### Step 1 : Setup VS code
+#### Step 2 : Render a Map and place a marker on our current position with a custom image
+#### Step 3 : search for all hospitals around us and place markers on them
 #### Step 4 : We use isoline routing to find the EV charging stations actually closest to us.
 #### Beyond : Final code with visual customizations.
+
+# Acquire credentials from Developer Portal 
+To access any of the APIs, first get your credentials by signing up for a freemium account
+
+[Register](https://developer.here.com/events/community-sa) for a free developer account</br>
+
+## Generate apikeys
+
+![Folding in action](https://github.com/kuberaspeaking/HERE-JS-workshop/blob/master/img/RegistrationGif.gif)
 
 # Let's begin!
 
