@@ -15,8 +15,12 @@
         <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
         <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css"/>
     </head>
-    <body>
-        <div id="mapContainer" style="width: 100vw; height: 100vh;" >
+       <body>
+        <div id="mapContainer" style="width: 90vw; height: 80vh; display: block; margin: 0 auto; border: solid 2px black; margin-top: 10px;" > </div>
+        <div style="width: 100vw; height: 40px; margin-top: 30px;">
+            <input type="button" onclick="showDeliveryRest()" value = "Show Restaurants" style="width: 200px; height: 30px; border: 2px solid black; display: block; margin: 0 auto; margin-top: 20px;">
+        </div>
+        <div id="panel" style="width: 30vw; background: #39B6B3; color: white; margin-top: 20px;display: block; margin: 0 auto;"></div>
     </body>
     <script>
         var platform = new H.service.Platform({
