@@ -8,6 +8,6 @@
 ![Folding in action](https://github.com/kuberaspeaking/HERE-JS-workshop/blob/master/img/RegistrationGif.gif)
 
 
-[![Foo](https://github.com/kuberaspeaking/HERE-JS-workshop/blob/master/img/s2.png)](https://github.com/kuberaspeaking/HERE-JS-workshop/blob/master/Step2.md) 
+[![Foo](https://github.com/vidhanbhonsle/Interactive-Map-Workshop/blob/master/img/s2.png)](https://github.com/vidhanbhonsle/Interactive-Map-Workshop/blob/master/Step2.md) 
 
 
