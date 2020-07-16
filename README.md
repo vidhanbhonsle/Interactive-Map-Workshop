@@ -19,9 +19,6 @@ An HTML page which shows a map when opened in a browser.
 
 # Let's begin!
 
-<p align="center">
-  < src="https://github.com/vidhanbhonsle/Interactive-Map-Workshop/blob/master/img/s1.png">
-</p>
 [![Foo](https://github.com/vidhanbhonsle/Interactive-Map-Workshop/blob/master/img/s1.png)](https://github.com/vidhanbhonsle/Interactive-Map-Workshop/blob/master/Step1.md) 
 
 
