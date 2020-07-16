@@ -1,63 +1,88 @@
 
-# Add isoline routing using isoline of the Routing API
+# Draw a Route to one of the Hospital
+
+## Select the Hospital number 5 in the list
+- The numbering here is from 0 to 9 so the 5th hospital will be number 4
+
+## Add the following code after ```map.addObject(restGroup);``` within the '}' in the previous step
+
+```javascript
+    let deliveryRestPosition = response.items[4].position;
+    showRoute(deliveryRestPosition);
+
+```
+# Get Route from the selected restaurant to your home with a car
+
 Add the following code before </script> tag
 
 ```javascript
-        
-            var myLoc = myPos.lat + ',' + myPos.lng;
-            var routingParams = {
-                'mode': 'fastest;car;',
-                'start': myLoc,
-                'range': '600', // 10 (10x60secs) minutes of driving 
-                'rangetype': 'time'
-            };
+       function showRoute(restPos){
 
-            // Define a callback function to process the isoline response.
+            // console.log(restPos);
 
-            var onResult = function(result) {
-                var center = new H.geo.Point(
-                    result.response.center.latitude,
-                    result.response.center.longitude),
-                isolineCoords = result.response.isoline[0].component[0].shape,
-                linestring = new H.geo.LineString(),
-                isolinePolygon,
-                isolineCenter;
+            let routingParameters = {
+                // The routing mode:
+                mode: 'fastest;car;traffic:enabled',
+                // The start point of the route:
+                waypoint0: restPos.lat+','+restPos.lng ,
+                // The end point of the route:
+                waypoint1: myPosition.lat+','+myPosition.lng,
+                // To retrieve the shape of the route we choose the route
+                // representation mode 'display'
+                representation: 'display',
 
-                // Add the returned isoline coordinates to a linestring:
+                routeattributes : 'summary,shape',
 
-                isolineCoords.forEach(function(coords) {
-                    linestring.pushLatLngAlt.apply(linestring, coords.split(','))
-                })
+                language: "en-US"
 
-                // Create a polygon and a marker representing the isoline:
+                };
 
-                isolinePolygon = new H.map.Polygon(linestring);
-                
-                // Add the polygon and marker to the map:
-
-                map.addObject(isolinePolygon);
-
-                // Center and zoom the map so that the whole isoline polygon is
-                // in the viewport:
-
-                map.getViewModel().setLookAtData({bounds: isolinePolygon.getBoundingBox()});
-            }
-
-            // Get an instance of the routing service: 
-
-            var router = platform.getRoutingService();
-
-            // Call the Routing API to calculate an isoline:
-
-            router.calculateIsoline(
-                routingParams,
-                onResult,
+            router.calculateRoute(routingParameters, onResult,
                 function(error) {
-                    alert(error.message)
-                }
-            );
+                    alert(error.message);
+            });    
+        }
+
 ```
-</br> Double-click on saved file to view on browser
+# Draw the route received form the Routing API using Polyline
+Add the following code before </script> tag
+
+```javascript
+        // Define a callback function to process the routing response:
+        var onResult = function(result) {
+            var route,
+                routeShape,
+                startPoint,
+                endPoint,
+                linestring;
+            if(result.response.route) {
+                // Pick the first route from the response:
+                let route = result.response.route[0];
+                // Pick the route's shape:
+                routeShape = route.shape;
+
+                // Create a linestring to use as a point source for the route line
+                linestring = new H.geo.LineString();
+
+                // Push all the points in the shape into the linestring:
+                routeShape.forEach(function(point) {
+                    var parts = point.split(',');
+                    linestring.pushLatLngAlt(parts[0], parts[1]);
+                });
+
+                // Create a polyline to display the route:
+                var routeLine = new H.map.Polyline(linestring, {
+                    style: { strokeColor: 'RGB(116, 66, 200)', lineWidth: 7 }
+                });
+                // Add the route polyline and the two markers to the map:
+                map.addObject(routeLine);
+                
+                // Set the map's viewport to make the whole route visible:
+                map.getViewModel().setLookAtData({bounds: routeLine.getBoundingBox()});
+            }
+        };
+            
+```
 
 [![Foo](https://github.com/vidhanbhonsle/Interactive-Map-Workshop/blob/master/img/s5.png)](https://github.com/vidhanbhonsle/Interactive-Map-Workshop/blob/master/Step5.md) 
 

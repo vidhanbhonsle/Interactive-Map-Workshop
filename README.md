@@ -13,8 +13,8 @@ An HTML page which shows a map when opened in a browser.
 ## Steps
 #### Step 1 : Setup Visual Studio code
 #### Step 2 : Render a Map and place a marker on our current position with a custom image
-#### Step 3 : search for all hospitals around us and place markers on them
-#### Step 4 : We use isoline routing to find the EV charging stations actually closest to us.
+#### Step 3 : Search for all hospitals around us and place markers on them
+#### Step 4 : Draw a Route to one of the Hospital
 #### Beyond : Final code with visual customizations.
 
 ## Acquire credentials from Developer Portal 
