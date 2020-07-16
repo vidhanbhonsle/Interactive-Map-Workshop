@@ -17,7 +17,7 @@ Add the following code before </script> tag
 ```
 </br> 
 
-# Lets add nice markers to display these restaurants
+# Lets add nice markers to display these hospitals
 
 Add the following code before </script> tag
 
