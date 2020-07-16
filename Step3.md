@@ -1,7 +1,4 @@
-
-
-
-# Draw a circle of radius 5 Km using add object of Interactive maps API
+# Search for all hospitals around us and place markers on them
 Add the following code before </script> tag
 
 ```javascript
