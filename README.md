@@ -15,6 +15,7 @@ An HTML page which shows a map when opened in a browser.
 #### Step 2 : Render a Map and place a marker on our current position with a custom image
 #### Step 3 : Search for all hospitals around us and place markers on them
 #### Step 4 : Draw a Route to one of the Hospital
+#### Step 5 : Select instructions from the route to be displayed
 #### Beyond : Final code with visual customizations.
 
 ## Acquire credentials from Developer Portal 
