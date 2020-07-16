@@ -7,8 +7,8 @@
 ## Add the following code after ```map.addObject(restGroup);``` within the '}' in the previous step
 
 ```javascript
-    let deliveryRestPosition = response.items[4].position;
-    showRoute(deliveryRestPosition);
+    let hospitalPosition = response.items[4].position;
+    showRoute(hospitalPosition);
 
 ```
 # Get Route from your home to the selected hospital
