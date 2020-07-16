@@ -1,10 +1,16 @@
 ![HERE Logo](https://github.com/vidhanbhonsle/Interactive-Map-Workshop/blob/master/img/HERE_Logo_2016_POS_sRGB200X183.jpg) 
 
+## Introduction
+
 In this workshop we will learn how to create an interactive map using JS and REST APIs from the HERE Location Suite.
 
 ## Prerequisites
 
 
+## Expected Outcome
+
+
+## Steps
 #### Step 1 : Acquire credentials from Developer Portal
 #### Step 2 : Render a Map
 #### Step 3 : We draw a cirle around our position
