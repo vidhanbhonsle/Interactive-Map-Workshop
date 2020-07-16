@@ -65,5 +65,23 @@ Add the following code before </script> tag
 ```
 </br> Double-click on saved file to view on browser
 
+## Add multiple marker
+Add the following code before </script> tag
+
+```javascript
+           let locations = [
+			{ lat: 31.22, lng: -91.02 },
+			{ lat: 30.22, lng: -88.02 },
+			{ lat: 29.22, lng: -89.02 },
+			{ lat: 28.22, lng: -88.02 },
+			{ lat: 27.22, lng: -94.02 },
+		];
+
+		locations.forEach(l => {
+			map.addObject(new H.map.Marker(l));
+		});
+```
+</br> Double-click on saved file to view on browser
+
 [![Foo](https://github.com/vidhanbhonsle/Interactive-Map-Workshop/blob/master/img/s3.png)](https://github.com/vidhanbhonsle/Interactive-Map-Workshop/blob/master/Step3.md) 
 
