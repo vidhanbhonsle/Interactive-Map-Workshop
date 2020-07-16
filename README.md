@@ -10,7 +10,7 @@ An IDE - [VS Code](https://code.visualstudio.com/download)
 ## Expected Outcome
 An HTML page which shows a map when opened in a browser.
 
-![Folding in action](/img/next.png)
+![Folding in action](/img/outcome.png)
 
 ## Steps
 #### Step 1 : Setup Visual Studio code
