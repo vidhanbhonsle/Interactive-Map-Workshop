@@ -20,7 +20,7 @@ An HTML page which shows a map when opened in a browser.
 # Let's begin!
 
 <p align="center">
-  <img width="460" height="300" src="http://www.fillmurray.com/460/300">
+  <src="https://github.com/vidhanbhonsle/Interactive-Map-Workshop/blob/master/img/s1.png">
 </p>
 [![Foo](https://github.com/vidhanbhonsle/Interactive-Map-Workshop/blob/master/img/s1.png)](https://github.com/vidhanbhonsle/Interactive-Map-Workshop/blob/master/Step1.md) 
 
