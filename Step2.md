@@ -1,3 +1,4 @@
+# Render a Map
 Open your favourite IDE or a simple code editor like notepad or notepad++
 
 Copy the code below into your editor.
@@ -46,11 +47,11 @@ Copy the code below into your editor.
     </body>
 </html>
 ```
-# Save the file as HERE_JS_Workshop.html
+## Save the file as HERE_JS_Workshop.html
 
 </br> Double-click on saved file to view on browser
 
-# Adding a position marker using map object of Interactive maps API
+## Add a position marker using map object of Interactive maps API
 Add the following code before </script> tag
 
 ```javascript
