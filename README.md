@@ -17,14 +17,14 @@ An HTML page which shows a map when opened in a browser.
 #### Step 4 : We use isoline routing to find the EV charging stations actually closest to us.
 #### Beyond : Final code with visual customizations.
 
-# Acquire credentials from Developer Portal 
+## Acquire credentials from Developer Portal 
 To access any of the APIs, first get your credentials by signing up for a freemium account
 
 [Register](https://developer.here.com/events/community-sa) for a free developer account</br>
 
 ## Generate apikeys
 
-![Folding in action](https://github.com/kuberaspeaking/HERE-JS-workshop/blob/master/img/RegistrationGif.gif)
+![Folding in action](https://github.com/vidhanbhonsle/Interactive-Map-Workshop/blob/master/img/RegistrationGif.gif)
 
 # Let's begin!
 
