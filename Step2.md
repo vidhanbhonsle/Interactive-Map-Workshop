@@ -82,5 +82,41 @@ Add the following code before </script> tag
 ```
 </br> Double-click on saved file to view on browser
 
+# Changing the language of the map
+- To change the language, change the 'en-US' to the language code you want:
+- en-US – English (United States)
+- de-DE – German
+- es-ES – Spanish
+- fi-FI – Finnish
+- fr-FR – French
+- it-IT – Italian
+- nl-NL – Dutch
+- pl-PL – Polish
+- pt-BR – Portuguese (Brazil)
+- pt-PT – Portuguese (Portugal)
+- ru-RU – Russian
+- tr-TR – Turkish
+- zh-CN – Chinese (China)
+
+# Adding a position marker using map object of Interactive maps API
+- Add a folder named img inside the folder Food_Delivery_With_HERE
+- Inside the folder img, save the image you want as the icon for restaurants and home
+- You can also download the ones I used for [home](img/home.png) and [restaurants](img/takeout.png)
+- Add the following code before </script> tag
+
+
+```javascript
+            // create an icon for the marker. Choose any image you want. I created mine using draw.io 
+            
+            var homeIcon = new H.map.Icon('img/home.png'); 
+            
+            var posMarker = new H.map.Marker(myPosition,{icon:homeIcon});
+                
+            // Add the marker to the map 
+
+        map.addObject(posMarker);
+```
+### Click on the 'Go Live' button on the bottom right of your VSCODE application window and see your application open in your default browser
+
 [![Foo](https://github.com/vidhanbhonsle/Interactive-Map-Workshop/blob/master/img/s3.png)](https://github.com/vidhanbhonsle/Interactive-Map-Workshop/blob/master/Step3.md) 
 
