@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>HERE Logistics Workshop</title>
+        <title>HERE CU Workshop</title>
         <!-- SCRIPTS -->
         <meta name="viewport" charset="UTF-8" content="initial-scale=1.0, width=device-width" />
         <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
@@ -16,8 +16,8 @@
         <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css"/>
     </head>
     <body>
-        <h1 style="text-align: center;">Food Delivery with HERE</h1>
-        <div id="map" style="width: 100vw; height: 100vh; background: #39B6B3;" >
+        <h1 style="text-align: center;">Interactive Map with HERE</h1>
+        <div id="mapContainer" style="width: 100vw; height: 100vh;" >
     </body>
     <script>
         var platform = new H.service.Platform({
