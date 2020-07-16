@@ -10,6 +10,8 @@ An IDE - [VS Code](https://code.visualstudio.com/download)
 ## Expected Outcome
 An HTML page which shows a map when opened in a browser.
 
+![Folding in action](/img/next.png)
+
 ## Steps
 #### Step 1 : Setup Visual Studio code
 #### Step 2 : Render a Map and place a marker on our current position with a custom image
