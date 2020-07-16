@@ -11,7 +11,7 @@
     showRoute(deliveryRestPosition);
 
 ```
-# Get Route from the selected restaurant to your home with a car
+# Get Route from your home to the selected hospital
 
 Add the following code before </script> tag
 
@@ -24,9 +24,9 @@ Add the following code before </script> tag
                 // The routing mode:
                 mode: 'fastest;car;traffic:enabled',
                 // The start point of the route:
-                waypoint0: restPos.lat+','+restPos.lng ,
+                waypoint0: myPosition.lat+','+myPosition.lng,
                 // The end point of the route:
-                waypoint1: myPosition.lat+','+myPosition.lng,
+                waypoint1: restPos.lat+','+restPos.lng ,
                 // To retrieve the shape of the route we choose the route
                 // representation mode 'display'
                 representation: 'display',
