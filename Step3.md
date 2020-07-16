@@ -24,7 +24,7 @@ Add the following code before </script> tag
 ```javascript
         function displayHospitals(response){
 
-            var takeOutIcon = new H.map.Icon('img/takeout.png');
+            var takeOutIcon = new H.map.Icon('img/hospital.png');
 
             var restGroup = new H.map.Group();
 

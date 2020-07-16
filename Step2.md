@@ -79,8 +79,8 @@
 
 ## Adding a position marker using map object of Interactive maps API
 - Add a folder named img inside the folder Interactive_Map_With_HERE
-- Inside the folder img, save the image you want as the icon for restaurants and home
-- You can also download the ones I used for [home](img/home.png) and [restaurants](img/takeout.png)
+- Inside the folder img, save the image you want as the icon for hospitals and home
+- You can also download the ones I used for [home](img/home.png) and [hospitals](img/hospital.png)
 - Add the following code before </script> tag
 
 
