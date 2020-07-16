@@ -1,5 +1,4 @@
-
-#### [Final Result](https://kuberaspeaking.github.io/HERE-JS-workshop/)
+# Final Code
 Check [final code](/index.html) with modifications
 
 # Contact Information
