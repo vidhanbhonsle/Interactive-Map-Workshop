@@ -1,4 +1,4 @@
-# Final Code
+# Final Code and Resources
 Check [final code](/index.html) with modifications
 
 # Contact Information
@@ -6,7 +6,6 @@ Check [final code](/index.html) with modifications
 [![Foo](https://dl2.macupdate.com/images/icons128/50617.png?d=1489440003)](http://t.her.is/slack) 
 [![Foo](https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-icon.png?v=c78bd457575a)](https://stackoverflow.com/questions/tagged/here-api)
 [![Foo](http://www.markwk.com/images/github_logo.png)](https://github.com/heremaps)
-[![Foo](https://cdn3.iconfinder.com/data/icons/ultimate-social/150/18_email-128.png)](mapcreator@here.com) 
 
 # Watch live webinars and videos
 
