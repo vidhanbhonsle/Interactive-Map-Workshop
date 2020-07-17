@@ -85,13 +85,13 @@
 
 
 ```javascript
-            // create an icon for the marker. Choose any image you want. I created mine using draw.io 
+        // create an icon for the marker. Choose any image you want. I created mine using draw.io 
             
-            var homeIcon = new H.map.Icon('img/home.png'); 
+        var homeIcon = new H.map.Icon('img/home.png'); 
             
-            var posMarker = new H.map.Marker(myPosition,{icon:homeIcon});
+        var posMarker = new H.map.Marker(myPosition,{icon:homeIcon});
                 
-            // Add the marker to the map 
+        // Add the marker to the map 
 
         map.addObject(posMarker);
 ```
