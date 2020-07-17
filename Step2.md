@@ -89,6 +89,8 @@
             
         var homeIcon = new H.map.Icon('img/home.png'); 
             
+        // Create a marker using the previously instantiated icon:
+       
         var posMarker = new H.map.Marker(myPosition,{icon:homeIcon});
                 
         // Add the marker to the map 
