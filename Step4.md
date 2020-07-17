@@ -20,6 +20,7 @@ Add the following code before </script> tag
 
             // console.log(restPos);
 
+            // Create the parameters for the routing request:
             let routingParameters = {
                 // The routing mode:
                 mode: 'fastest;car;traffic:enabled',
@@ -35,7 +36,7 @@ Add the following code before </script> tag
 
                 language: "en-US"
 
-                };
+            };
 
             router.calculateRoute(routingParameters, onResult,
                 function(error) {
