@@ -10,13 +10,12 @@
         <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
         <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css"/>
     </head>
-    <body>
+       <body>
         <div id="mapContainer" style="width: 90vw; height: 80vh; display: block; margin: 0 auto; border: solid 2px black; margin-top: 10px;" > </div>
         <div style="width: 100vw; height: 40px; margin-top: 30px;">
             <input type="button" onclick="showHospitals()" value = "Show Hospitals" style="width: 200px; height: 30px; border: 2px solid black; display: block; margin: 0 auto; margin-top: 20px;">
         </div>
-        <div id="panel" style="width: 30vw; background: #39B6B3; color: white; margin-top: 20px;display: block; margin: 0 auto;"></div>
-        
+        <div id="panel" style="width: 30vw; background: #9fb639; color: white; margin-top: 20px;display: block; margin: 0 auto;"></div>
     </body>
     <script>
         var platform = new H.service.Platform({
@@ -54,74 +53,76 @@
         // Get an instance of the geocoding and search service:
 
         var service = platform.getSearchService();
-		 // create an icon for the marker. Choose any image you want. I created mine using draw.io 
+
+        // create an icon for the marker. Choose any image you want. I created mine using draw.io 
             
-            var homeIcon = new H.map.Icon('img/home.png'); 
+        var homeIcon = new H.map.Icon('img/home.png'); 
             
-            var posMarker = new H.map.Marker(myPosition,{icon:homeIcon});
+        var posMarker = new H.map.Marker(myPosition,{icon:homeIcon});
                 
-            // Add the marker to the map 
+        // Add the marker to the map 
 
         map.addObject(posMarker);
 
-function showHospitals(){
+        function showHospitals(){
 
-let param = {
-    at : myPosition.lat+','+myPosition.lng,
-    q: "hospital",
-    limit:10
-}; 
+        let param = {
+            at : myPosition.lat+','+myPosition.lng,
+            q: "hospital",
+            limit:10
+        }; 
 
-service.browse(param,displayHospitals,alert);
-}
+        service.browse(param,displayHospitals,alert);
+        }
 
+        function displayHospitals(response){
 
-function displayHospitals(response){
+            var hospitalIcon = new H.map.Icon('img/hospital.png');
 
-var takeOutIcon = new H.map.Icon('img/takeout.png');
+            var restGroup = new H.map.Group();
 
-var restGroup = new H.map.Group();
+            for(let i = 0; i<response.items.length; i++){
+                let restPosition = response.items[i].position; 
+            
+                let data = response.items[i].title;
+            
+                let restMarker = new H.map.Marker(restPosition,{icon: hospitalIcon} );
 
-for(let i = 0; i<response.items.length; i++){
-    let restPosition = response.items[i].position; 
-  
-    let data = response.items[i].title;
-  
-    let restMarker = new H.map.Marker(restPosition,{icon: takeOutIcon} );
+                restGroup.addObject(restMarker);
+            }
 
-    restGroup.addObject(restMarker);
-}
+            map.addObject(restGroup);
+            let hospitalPosition = response.items[4].position;
+            showRoute(hospitalPosition);    
+        }
 
-map.addObject(restGroup);
-let hospitalsPosition = response.items[4].position;
-    showRoute(hospitalsPosition);
-}
 function showRoute(restPos){
 
-// console.log(restPos);
+            // console.log(restPos);
 
-let routingParameters = {
-    // The routing mode:
-    mode: 'fastest;car;traffic:enabled',
-    // The start point of the route:
-    waypoint0: myPosition.lat+','+myPosition.lng,
-    // The end point of the route:
-    waypoint1: restPos.lat+','+restPos.lng ,
-    // To retrieve the shape of the route we choose the route
-    // representation mode 'display'
-    representation: 'display',
+            let routingParameters = {
+                // The routing mode:
+                mode: 'fastest;car;traffic:enabled',
+                // The start point of the route:
+                waypoint0: myPosition.lat+','+myPosition.lng,
+                // The end point of the route:
+                waypoint1: restPos.lat+','+restPos.lng ,
+                // To retrieve the shape of the route we choose the route
+                // representation mode 'display'
+                representation: 'display',
 
-    routeattributes : 'summary,shape',
+                routeattributes : 'summary,shape',
 
-    language: "en-US"
+                language: "en-US"
 
-    };
+                };
 
-router.calculateRoute(routingParameters, onResult,
-    function(error) {
-        alert(error.message);
-});    
+            router.calculateRoute(routingParameters, onResult,
+                function(error) {
+                    alert(error.message);
+            });    
 }
+
 // Define a callback function to process the routing response:
 var onResult = function(result) {
             var route,
@@ -153,12 +154,13 @@ var onResult = function(result) {
 
                 let maneuver = route.leg[0].maneuver;
                 let summary = route.summary;
-                displayInstructions(maneuver,summary);         
+                displayInstructions(maneuver,summary);
                 
                 // Set the map's viewport to make the whole route visible:
                 map.getViewModel().setLookAtData({bounds: routeLine.getBoundingBox()});
             }
         };
+
         Number.prototype.toMMSS = function () {
             return  Math.floor(this / 60)  +' minutes '+ (this % 60)  + ' seconds.';
         }
@@ -179,5 +181,5 @@ var onResult = function(result) {
 
             document.getElementById("panel").innerHTML+="Estimated time : " + summary.travelTime.toMMSS();
         }
-</script>
+    </script>
 </html>
