@@ -44,7 +44,7 @@ Add the following code before </script> tag
 
             // Add the group to the map object
 
-            map.addObject(restGroup);
+                map.addObject(restGroup);
         }
 ```
 
