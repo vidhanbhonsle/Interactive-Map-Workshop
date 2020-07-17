@@ -22,21 +22,21 @@ Add the following code before </script> tag
 Add the following code before </script> tag
 
 ```javascript
-        function displayHospitals(response){
+            function displayHospitals(response){
 
-            var takeOutIcon = new H.map.Icon('img/hospital.png');
+                var takeOutIcon = new H.map.Icon('img/hospital.png');
 
-            var restGroup = new H.map.Group();
+                var restGroup = new H.map.Group();
 
-            for(let i = 0; i<response.items.length; i++){
-                let restPosition = response.items[i].position; 
+                for(let i = 0; i<response.items.length; i++){
+                    let restPosition = response.items[i].position; 
               
-                let data = response.items[i].title;
+                    let data = response.items[i].title;
               
-                let restMarker = new H.map.Marker(restPosition,{icon: takeOutIcon} );
+                    let restMarker = new H.map.Marker(restPosition,{icon: takeOutIcon} );
 
-                restGroup.addObject(restMarker);
-            }
+                    restGroup.addObject(restMarker);
+                    }
 
             map.addObject(restGroup);
         }
