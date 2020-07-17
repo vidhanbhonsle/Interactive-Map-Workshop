@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="https://github.com/vidhanbhonsle/Interactive-Map-Workshop/blob/master/img/HERE_Logo_2016_POS_sRGB200X183.jpg" />
+</p>
 ![HERE Logo](https://github.com/vidhanbhonsle/Interactive-Map-Workshop/blob/master/img/HERE_Logo_2016_POS_sRGB200X183.jpg) 
 
 ## Introduction
